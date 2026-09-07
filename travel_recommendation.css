@@ -26,8 +26,7 @@ h1, h2, h3 {
 }
 
 /* ---------- Navbar ---------- */
-#navbar {
-  background: var(--teal); 
+#navbar { 
    position: fixed;
   display: flex;
   align-items: center;
