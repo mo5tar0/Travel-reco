@@ -27,7 +27,6 @@ h1, h2, h3 {
 
 /* ---------- Navbar ---------- */
 #navbar { 
-   position: sticky;
   display: flex;
   align-items: center;
   justify-content: space-between;
