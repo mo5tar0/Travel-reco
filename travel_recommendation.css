@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --teal: #173F3F;
+  --sand: #EFE6D8;
+  --coral: #D96C4A;
+  --coral-dark: #BD5636;
+  --ink: #1A1A1A;
+  --paper: #FAF7F2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+h1, h2, h3 {
+  font-family: 'Fraunces', serif;
+  margin: 0;
+}
+
+/* ---------- Navbar ---------- */
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 40px;
+  background: var(--teal);
+  color: var(--paper);
+  flex-wrap: wrap;
+  /* gap: 12px; */
+}
+
+#navbar h1 {
+  font-size: 1.6rem;
+  color: var(--paper);
+}
+
+#navbar ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+#navbar ul li a {
+  color: var(--paper);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+#navbar ul li a:hover,
+#navbar ul li a:focus-visible {
+  text-decoration: underline;
+}
+
+#navbar input[type="text"] {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  min-width: 200px;
+}
+
+#navbar button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background: var(--coral);
+  color: var(--paper);
+}
+
+#navbar button:hover,
+#navbar button:focus-visible {
+  background: var(--coral-dark);
+}
+
+#navbar #btnReset {
+  background: transparent;
+  border: 1px solid var(--paper);
+}
+
+#navbar #btnReset:hover,
+#navbar #btnReset:focus-visible {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+a:focus-visible, button:focus-visible, input:focus-visible {
+  outline: 2px solid var(--coral);
+  outline-offset: 2px;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(23, 63, 63, 0.55), rgba(23, 63, 63, 0.55)), url("images/City-beaches-South-Beach-Miami-Florida-shutterstock_514982068-resize-1024x640.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; 
+  gap: 60px;                 /* NEW: spacing between hero-overlay, about-body, our-team */
+  padding: 80px 20px;
+}
+
+.hero-overlay {
+  text-align: center;
+    color: var(--paper);
+  max-width: 700px;
+}
+
+.hero-overlay h1 {
+  font-size: 3rem;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.hero-overlay p {
+  font-size: 1.15rem;
+  margin-bottom: 24px;
+}
+
+.hero-btn {
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  background: var(--coral);
+  color: var(--paper);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.hero-btn:hover,
+.hero-btn:focus-visible {
+  background: var(--coral-dark);
+}
+
+/* ---------- Intro (home page) ---------- */
+.intro {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.intro h2 {
+  font-size: 2rem;
+   color: var(--paper);
+  margin-bottom: 16px;
+}
+
+.intro p {
+  font-size: 1.05rem;
+   color: var(--paper);
+  line-height: 1.6;
+}
+
+/* ---------- Social icons ---------- */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding: 0 0 60px;
+}
+
+.social-icons a {
+  font-size: 1.6rem;
+  color: var(--teal);
+  text-decoration: none;
+}
+
+.social-icons a:hover,
+.social-icons a:focus-visible {
+  color: var(--coral);
+}
+
+/* ---------- Results grid (Task 8) ---------- */
+#results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px 70px;
+}
+
+.result-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.result-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.result-card .result-body {
+  padding: 18px 20px;
+}
+
+.result-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.result-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0 0 14px;
+}
+
+.result-card button {
+  padding: 8px 18px;
+  border: none;
+  border-radius: 20px;
+  background: var(--teal);
+  color: var(--paper);
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+}
+
+.result-card button:hover,
+.result-card button:focus-visible {
+  background: var(--coral);
+}
+
+.no-results {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 1.05rem;
+  color: #666;
+}
+
+/* ---------- About Us page ---------- */
+
+.about-body {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+.about-body h2 {
+  font-size: 1.6rem;
+    color: var(--paper);
+  margin-bottom: 14px;
+}
+
+.about-body p {
+  line-height: 1.6;
+    color: var(--paper);
+  margin-bottom: 30px;
+}
+
+.our-team {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px 70px;
+  text-align: center;
+}
+
+.our-team h2 {
+  font-size: 1.8rem;
+    color: var(--paper);
+  margin-bottom: 8px;
+}
+
+.our-team > p {
+   color: var(--paper);
+  margin-bottom: 36px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+.team-member img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 14px;
+}
+
+.team-member h3 {
+  font-size: 1.1rem;
+    color: var(--paper);
+  margin-bottom: 4px;
+}
+
+.team-member p {
+   color: var(--paper);
+  margin: 0;
+}
+
+/* ---------- Contact Us page ---------- */
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 60px 20px 80px;
+}
+
+.contact-form h2 {
+  font-size: 1.6rem;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contact-form label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px 12px;
+ border: 1px solid rgba(250, 247, 242, 0.5); 
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  background: rgba(255, 255, 255, 0.15); 
+  color: var(--paper);  
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-form button[type="submit"] {
+  margin-top: 20px;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: var(--coral);
+  color: var(--paper);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.contact-form button[type="submit"]:hover,
+.contact-form button[type="submit"]:focus-visible {
+  background: var(--coral-dark);
+}
+
+.form-confirmation {
+  text-align: center;
+  color: var(--teal);
+  font-weight: 500;
+  margin-top: 14px;
+  display: none;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 640px) {
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-overlay h1 {
+    font-size: 2.1rem;
+  }
+}
